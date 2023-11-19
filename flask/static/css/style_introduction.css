@@ -1,0 +1,113 @@
+/* Reset some default styles */
+body,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../bg1.png');
+    color: #333;
+    margin: 20px;
+}
+
+/* Container styles */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Header styles */
+h1 {
+    color: #0f0e0e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #0f0e0e;
+    margin-top: 5px;
+    /* Adjusted margin-top value */
+    /* Adjusted margin-bottom value */
+}
+
+/* Form styles */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="file"],
+select,
+input[type="submit"] {
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+select {
+    margin-bottom: 10px;
+}
+
+/* Error message styles */
+.error-message {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: rgba(36, 87, 44, 0);
+    padding: 15px;
+    text-align: right;
+    /* Align navigation to the right */
+    position: absolute;
+    /* Position the navigation absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav a {
+    color: #0f0e0e;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+button {
+    z-index: 1;
+    position: relative;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    padding: 0.5em 1em;
+    outline: none;
+    border: none;
+    background-color: hsl(236, 32%, 26%);
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+}
+
+.text-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    max-width: 600px;
+    /* Set the maximum width */
+    margin: 0 auto;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Adversarial Training Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/style_result.css") }}">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+        <nav>
+                <a href="/">主页</a>
+                <a href="/about">简介</a>
+                <a href="/test">测试</a>
+        </nav>
+            <br><br>
+        <h1>Deepfake Adversarial Training Result</h1>
+        <br><br>
+        <div class="image-container">
+        <h2>Original Image</h2>
+        <img id="original_Image" src="{{ url_for('static', filename='original_image.jpg') }}" alt="Original Image">
+        </div>
+        <br><br>
+        <div class="image-container">
+        <h2>Fake Image</h2>
+        <img  id="fake_Image" src="{{ url_for('static', filename='fake_image.jpg') }}" alt="Fake Image">
+        </div>
+        <button id="generateResultButton">生成新结果</button>
+        <script>
+        $(document).ready(function () {
+            $("#generateResultButton").click(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: '/result2',
+                    success: function (data) {
+                        window.open('/result2','_blank')
+                    },
+                    error: function (error) {
+                        console.log('Error generating new result:', error);
+                    }
+                });
+            });
+        });
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* style.css */
+
+/* Reset some default styles */
+body,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../bg1.png');
+    color: #333;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Header styles */
+h1 {
+    color: #0f0e0e;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #0f0e0e;
+}
+
+.image-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 600px;
+    /* Set the maximum width */
+    margin: 0 auto;
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+nav {
+    background-color: rgba(36, 87, 44, 0);
+    padding: 15px;
+    text-align: right;
+    /* Align navigation to the right */
+    position: absolute;
+    /* Position the navigation absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav a {
+    color: #0f0e0e;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    font-weight: bold;
+}

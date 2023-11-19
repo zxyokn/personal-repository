@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Adversarial Training Demo</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/style_test.css") }}">
+</head>
+<body>
+   <div class = "container">
+        <nav>
+            <a href="/">主页</a>
+            <a href="/about">简介</a>
+            <a href="/test">测试</a>
+        </nav>
+        <br><br>
+        <h1>Deepfake Adversarial Training Demo</h1>
+        
+        
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+
+        <form action="/result" method="post" enctype="multipart/form-data">
+            <label for="file">请选择你的图片:</label>
+            <input type="file" name="file" accept="image/*" required>
+            
+                <label for="noise_intensity">请选择噪声强度:</label> 
+                <select name="noise_intensity" id="noise_intensity">
+                <option value="0">No Noise</option>
+                <option value="10">Low</option>
+                <option value="25" selected>Medium (Default)</option>
+                <option value="50">High</option>
+            </select>
+             
+
+            <br><br>
+
+            <label for="selected_option">请选择功能:</label>
+            <select name="selected_option" id="selected_option">
+                <option value="option1">starGAN</option>
+                <option value="option2">cycleGAN</option>
+            </select>
+
+            <br><br>
+
+            <input type="submit" value="Generate Deepfake">
+        </form>
+    </div>
+
+</html>

@@ -1,0 +1,111 @@
+/* Reset some default styles */
+body,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../bg1.png');
+    color: #333;
+    margin: 20px;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Header styles */
+h1 {
+    margin-bottom: 20px;
+    font-size: 56px;
+}
+
+button {
+    z-index: 1;
+    position: relative;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    padding: 1em 6em;
+    outline: none;
+    border: none;
+    background-color: hsl(236, 32%, 26%);
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+}
+
+button::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: #3cefff;
+    transform-origin: center;
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.45s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    color: #161616;
+}
+
+button:hover::before {
+    transform: translate3d(-50%, -50%, 0) scale3d(20, 20, 20);
+}
+
+nav {
+    background-color: rgba(36, 87, 44, 0);
+    padding: 15px;
+    text-align: right;
+    /* Align navigation to the right */
+    position: absolute;
+    /* Position the navigation absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav a {
+    color: #0f0e0e;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.content {
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-title {
+    font-size: 24px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    margin: 0 10px;
+}
